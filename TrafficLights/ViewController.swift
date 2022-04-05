@@ -9,11 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var redLightsView: UIView!
+    @IBOutlet var yellowLightsView: UIView!
+    @IBOutlet var greenLightsView: UIView!
+    @IBOutlet var toggleButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func switchTrafficLights() {
+        
+    }
+    
 }
 

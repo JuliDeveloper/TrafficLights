@@ -57,6 +57,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="switchTrafficLights" destination="BYZ-38-t0r" eventType="touchUpInside" id="12z-II-ziv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -68,6 +71,12 @@
                             <constraint firstItem="OMQ-xH-6Ab" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ycE-r9-66c"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightsView" destination="Ykz-14-MuM" id="APu-Tx-9yq"/>
+                        <outlet property="redLightsView" destination="q8P-JX-kNO" id="v1G-Q0-bxa"/>
+                        <outlet property="toggleButton" destination="OMQ-xH-6Ab" id="uza-D3-wAF"/>
+                        <outlet property="yellowLightsView" destination="7Fm-7o-aEk" id="3jv-5C-i5Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
