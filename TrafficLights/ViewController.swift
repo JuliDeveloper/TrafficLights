@@ -9,28 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var redLightsView: UIView!
-    @IBOutlet var yellowLightsView: UIView!
-    @IBOutlet var greenLightsView: UIView!
+    @IBOutlet var redLightView: UIView!
+    @IBOutlet var yellowLightView: UIView!
+    @IBOutlet var greenLightView: UIView!
     @IBOutlet var toggleButton: UIButton!
     
-    let minAlpha = 0.3
-    let maxAlpha = 1.0
-    let circleRadius = 50.0
-    let buttonRadius = 10.0
+    private let minAlpha = 0.3
+    private let maxAlpha = 1.0
     
-    var colorTagState = 0
+    private var colorTagState = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        redLightsView.alpha = minAlpha
-        yellowLightsView.alpha = minAlpha
-        greenLightsView.alpha = minAlpha
+        redLightView.alpha = minAlpha
+        yellowLightView.alpha = minAlpha
+        greenLightView.alpha = minAlpha
         
-        redLightsView.layer.cornerRadius = circleRadius
-        yellowLightsView.layer.cornerRadius = circleRadius
-        greenLightsView.layer.cornerRadius = circleRadius
-        toggleButton.layer.cornerRadius = buttonRadius
+        redLightView.layer.cornerRadius = redLightView.frame.width / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
+        greenLightView.layer.cornerRadius = greenLightView.frame.width / 2
+        toggleButton.layer.cornerRadius = 10.0
         
         toggleButton.setTitle("START", for: .normal)
     }
@@ -40,23 +38,20 @@ class ViewController: UIViewController {
                 
         switch colorTagState {
             
-        case redLightsView.tag:
-            redLightsView.alpha = maxAlpha
-            greenLightsView.alpha = minAlpha
-            colorTagState = yellowLightsView.tag
+        case redLightView.tag:
+            redLightView.alpha = maxAlpha
+            greenLightView.alpha = minAlpha
+            colorTagState = yellowLightView.tag
             
-        case yellowLightsView.tag:
-            yellowLightsView.alpha = maxAlpha
-            redLightsView.alpha = minAlpha
-            colorTagState = greenLightsView.tag
-            
-        case greenLightsView.tag:
-            greenLightsView.alpha = maxAlpha
-            yellowLightsView.alpha = minAlpha
-            colorTagState = redLightsView.tag
+        case yellowLightView.tag:
+            yellowLightView.alpha = maxAlpha
+            redLightView.alpha = minAlpha
+            colorTagState = greenLightView.tag
             
         default:
-            break
+            greenLightView.alpha = maxAlpha
+            yellowLightView.alpha = minAlpha
+            colorTagState = redLightView.tag
         }
     }
 }

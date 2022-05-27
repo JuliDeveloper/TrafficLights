@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,40 +14,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HL6-k9-Dpo">
-                                <rect key="frame" x="157" y="94" width="100" height="360"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HL6-k9-Dpo">
+                                <rect key="frame" x="157" y="50" width="100" height="360"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-JX-kNO">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="UEn-60-dLC"/>
-                                            <constraint firstAttribute="width" constant="100" id="mCf-Ga-2c7"/>
-                                        </constraints>
                                     </view>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fm-7o-aEk">
                                         <rect key="frame" x="0.0" y="130" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="Oh6-IZ-lbM"/>
-                                            <constraint firstAttribute="height" constant="100" id="ZAe-be-fwj"/>
-                                        </constraints>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ykz-14-MuM">
                                         <rect key="frame" x="0.0" y="260" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="8jj-2b-ZeM"/>
-                                            <constraint firstAttribute="width" constant="100" id="sVf-ja-BXc"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="c1W-u2-Gbb"/>
+                                    <constraint firstAttribute="height" constant="360" id="kaV-n8-t9g"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMQ-xH-6Ab">
-                                <rect key="frame" x="99" y="748" width="216" height="54"/>
+                                <rect key="frame" x="99" y="622" width="216" height="54"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OMQ-xH-6Ab" secondAttribute="height" multiplier="4:1" id="J0E-Zc-YgN"/>
@@ -71,10 +63,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenLightsView" destination="Ykz-14-MuM" id="APu-Tx-9yq"/>
-                        <outlet property="redLightsView" destination="q8P-JX-kNO" id="v1G-Q0-bxa"/>
+                        <outlet property="greenLightView" destination="Ykz-14-MuM" id="APu-Tx-9yq"/>
+                        <outlet property="redLightView" destination="q8P-JX-kNO" id="v1G-Q0-bxa"/>
                         <outlet property="toggleButton" destination="OMQ-xH-6Ab" id="uza-D3-wAF"/>
-                        <outlet property="yellowLightsView" destination="7Fm-7o-aEk" id="3jv-5C-i5Z"/>
+                        <outlet property="yellowLightView" destination="7Fm-7o-aEk" id="3jv-5C-i5Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
